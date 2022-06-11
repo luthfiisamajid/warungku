@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- warungku.jenis tree view -->
+    <record id="warungku_jenis_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Jenis</field>
+        <field name="model">warungku.jenis</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="deskripsi"/>
+                <field name="letak"/>
+                <field name="barang_ids"/>
+                
+            </tree>
+        </field>
+    </record>
+
+    <!-- warungku.jenis form view -->
+    <record id="warungku_jenis_view_form" model="ir.ui.view">
+        <field name="name">Detail Jenis</field>
+        <field name="model">warungku.jenis</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="deskripsi"/>
+                        
+                    </group>
+                    <group>
+                        <field name="letak"/>
+                        <field name="barang_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- warungku.jenis action window -->
+    <record id="warungku_jenis_action" model="ir.actions.act_window">
+        <field name="name">Daftar Jenis</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">warungku.jenis</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="warungku_jenis_menu_act" 
+              name="Daftar Jenis" 
+              parent="warungku_supply_menu_categ" 
+              action="warungku_jenis_action" 
+              sequence="20"/>
+
+</odoo>

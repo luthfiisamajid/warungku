@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- warungku.barang tree view -->
+    <record id="warungku_barang_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Barang</field>
+        <field name="model">warungku.barang</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="harga"/>
+                <field name="stok"/>
+                <field name="harga_jual"/>
+                <field name="pemasok"/>
+                <field name="jenis_id"/>
+                <field name="laba"/>
+                <field name="kategori"/>
+                <field name="diskon"/>
+                <field name="comment_stok"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- warungku.barang form view -->
+    <record id="warungku_barang_view_form" model="ir.ui.view">
+        <field name="name">Detail Barang</field>
+        <field name="model">warungku.barang</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="harga"/>
+                        
+                    </group>
+                    <group>
+                        <field name="stok"/>
+                        <field name="pemasok"/>
+                        
+                    </group>
+                    <group>
+                        <field name="harga_jual"/>
+                        <field name="diskon"/>
+                    </group>
+                    <group>
+                        <field name="jenis_id"/>
+                        <field name="laba"/>
+                        <field name="kategori"/>
+                    </group>
+                    <group>
+                        <field name="comment_stok"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- warungku.barang action window -->
+    <record id="warungku_barang_action" model="ir.actions.act_window">
+        <field name="name">Daftar Barang</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">warungku.barang</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="warungku_barang_menu_act" 
+              name="Daftar Barang" 
+              parent="warungku_supply_menu_categ" 
+              action="warungku_barang_action" 
+              sequence="20"/>
+
+</odoo>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- warungku.suplaiar tree view -->
+    <record id="warungku_suplaiar_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Supplier</field>
+        <field name="model">warungku.suplaiar</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="cp"/>
+                <field name="no_tlp"/>
+                <field name="alamat"/>
+                <field name="barang_ids"/>
+                
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- warungku.suplaiar form view -->
+    <record id="warungku_supplier_view_form" model="ir.ui.view">
+        <field name="name">input Supplier</field>
+        <field name="model">warungku.suplaiar</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="alamat"/>
+                    </group>
+                    <group>
+                        <field name="cp"/>
+                        <field name="no_tlp"/>
+                    </group>
+                    <group>
+                        <field name="barang_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    
+    <!-- warungku.supplier action window -->
+    <record id="warungku_supplier_action" model="ir.actions.act_window">
+        <field name="name">Daftar Supplier</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">warungku.suplaiar</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="warungku_supplier_menu_act"
+              name="Daftar Supplier"
+              parent="warungku_supply_menu_categ" 
+              action="warungku_supplier_action" 
+              sequence="20"/>
+
+</odoo>

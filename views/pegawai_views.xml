@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <!-- warungku.pegawai tree view -->
+    <record id="warungku_pegawai_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Pegawai</field>
+        <field name="model">warungku.pegawai</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="jabatan"/>
+                <field name="gaji"/>
+                <field name="bonus"/>
+                <field name="menikah"/>
+            </tree>
+        </field>
+    </record>
+
+
+
+    <!-- warungku.pegawai form view -->
+    <record id="warungku_pegawai_view_form" model="ir.ui.view">
+        <field name="name">Form Pegawai</field>
+        <field name="model">warungku.pegawai</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="jabatan"/>
+                        <field name="gaji"/>
+                    </group>
+                    <group>
+                        <field name="bonus"/>
+                        <field name="menikah"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- warungku.pegawai action window -->
+    <record id="warungku_pegawai_action" model="ir.actions.act_window">
+        <field name="name">Pegawai</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">warungku.pegawai</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="warungku_pegawai_menu_act" 
+              name="Pegawai" 
+              parent="warungku_partner_menu_categ" 
+              action="warungku_pegawai_action" 
+              sequence="20"/>
+
+</odoo>

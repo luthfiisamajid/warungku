@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <!-- warungku.customer tree view -->
+    <record id="warungku_customer_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Customer</field>
+        <field name="model">warungku.customer</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="level"/>
+                <field name="menikah"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- warungku.customer form view -->
+    <record id="warungku_customer_view_form" model="ir.ui.view">
+        <field name="name">Form Customer</field>
+        <field name="model">warungku.customer</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="level"/>
+                        <field name="menikah"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- warungku.customer action window -->
+    <record id="warungku_customer_action" model="ir.actions.act_window">
+        <field name="name">Customer</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">warungku.customer</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="warungku_customer_menu_act" 
+              name="Customer" 
+              parent="warungku_partner_menu_categ" 
+              action="warungku_customer_action" 
+              sequence="20"/>
+
+</odoo>

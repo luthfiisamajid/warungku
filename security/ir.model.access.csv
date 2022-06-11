@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_warungku_suplaiar,access.warungku_suplaiar,model_warungku_suplaiar,,1,1,1,1
+access_warungku_barang,access.warungku_barang,model_warungku_barang,,1,1,1,1
+access_warungku_jenis,access.warungku_jenis,model_warungku_jenis,,1,1,1,1
+access_warungku_penjualan_detail,access.warungku_penjualan_detail,model_warungku_penjualan_detail,,1,1,1,1
+access_warungku_barang_detail,access.warungku_barang_detail,model_warungku_barang_detail,,1,1,1,1
+access_warungku_partner,access.warungku_partner,model_warungku_partner,,1,1,1,1
+access_warungku_pegawai,access.warungku_pegawai,model_warungku_pegawai,,1,1,1,1
+access_warungku_customer,access.warungku_customer,model_warungku_customer,,1,1,1,1
+access_warungku_pembelian,access.warungku_pembelian,model_warungku_pembelian,,1,1,1,1
+access_warungku_barang_pembelian,access.warungku_barang_pembelian,model_warungku_barang_pembelian,,1,1,1,1
